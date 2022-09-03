@@ -193,7 +193,7 @@ val relocations = setOf(
 )
 
 tasks.shadowJar {
-    exclude("DebugProblesKt.bin")
+    exclude("DebugProblesKt.bin") // a
     mergeServiceFiles()
     relocations.forEach { name ->
         relocate(name, "${basePackage}.$name")
